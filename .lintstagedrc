@@ -1,0 +1,17 @@
+{
+    "*.md": [
+        "markdownlint"
+    ],
+    "*.json": [
+        "jsonlint"
+    ],
+    ".*rc": [
+        "jsonlint"
+    ],
+    "*.js": [
+        "eslint"
+    ],
+    "*.vue": [
+        "eslint"
+    ]
+}
