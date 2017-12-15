@@ -5,20 +5,21 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var VueLocalStorage = _interopDefault(require('vue-localstorage'));
 
 var DatastoreMixin = {
-    data() {
+    data: function data() {
         return {
-            watchers: {},
-        }
+            watchers: {}
+        };
     },
 
+
     methods: {
-        save(key, value) {
+        save: function save(key, value) {
             this.$localStorage.set(key, value);
         },
-
-        load(key) {
-            return this.$localStorage.get(key)
+        load: function load(key) {
+            return this.$localStorage.get(key);
         },
+
 
         /**
          * Load json data from Cookie (could potentially use localstorage here).
@@ -27,53 +28,60 @@ var DatastoreMixin = {
          * @param {string} key
          * @param {boolean} watch
          */
-        loadData(key, watch = true) {
-            const storedData = this.load(key);
+        loadData: function loadData(key) {
+            var watch = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+
+            var storedData = this.load(key);
 
             if (storedData) this[key] = JSON.parse(storedData);
 
             if (watch) this.watchData(key);
         },
 
+
         /**
          * Save data to a Cookie with the provided key
          *
          * @param {string} key
          */
-        storeData(key) {
+        storeData: function storeData(key) {
             this.save(key, JSON.stringify(this[key]));
         },
+
 
         /**
          * Automatically save data whenever it is updated
          *
          * @param {string} key
          */
-        watchData(key) {
-            const watcher = this.$watch(key, () => {
-                this.storeData(key);
+        watchData: function watchData(key) {
+            var _this = this;
+
+            var watcher = this.$watch(key, function () {
+                _this.storeData(key);
             }, {
-                deep: true,
+                deep: true
             });
 
             this.watchers[key] = watcher;
         },
+
 
         /**
          * Stop watching for data changes on a given key (no autosave)
          *
          * @param {*} key
          */
-        endWatchData(key) {
-            const watcher = this.watchers[key];
+        endWatchData: function endWatchData(key) {
+            var watcher = this.watchers[key];
 
             if (typeof watcher === 'function') watcher();
-        },
-    },
+        }
+    }
 };
 
-const Datastore = {
-    install(Vue) {
+var Datastore = {
+    install: function install(Vue) {
         Vue.use(VueLocalStorage);
 
         Vue.mixin(DatastoreMixin);

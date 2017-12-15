@@ -1,6 +1,6 @@
 {
     "name": "maxfactor-vue-datastore",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A Vue plugin to persist data to local storage.",
     "main": "dist/index.js",
     "scripts": {
@@ -15,14 +15,16 @@
     "license": "MIT",
     "devDependencies": {
         "babel-eslint": "^8.0.2",
+        "babel-preset-es2015-rollup": "^3.0.0",
+        "eslint": "^4.12.1",
         "eslint-config-airbnb-base": "^12.1.0",
         "eslint-plugin-import": "^2.8.0",
         "eslint-plugin-vue": "^2.1.0",
-        "eslint": "^4.12.1",
         "husky": "^0.14.3",
         "jsonlint": "^1.6.0",
         "lint-staged": "^6.0.0",
-        "markdownlint-cli": "^0.5.0"
+        "markdownlint-cli": "^0.5.0",
+        "rollup-plugin-babel": "^3.0.2"
     },
     "dependencies": {
         "laravel-mix": "^1.7.2",

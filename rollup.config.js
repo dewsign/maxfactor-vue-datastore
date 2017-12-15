@@ -1,3 +1,5 @@
+import RollupPluginBabel from 'rollup-plugin-babel'
+
 export default {
     input: 'src/index.js',
     output: {
@@ -5,4 +7,7 @@ export default {
         format: 'cjs',
     },
     external: ['vue-localstorage'],
+    plugins: [
+        RollupPluginBabel(),
+    ],
 }
