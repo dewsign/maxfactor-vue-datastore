@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 - Automatically run build tool when publishing the package
+- Add link to repository
 
 ## [1.0.0] - 2018-02-20
 

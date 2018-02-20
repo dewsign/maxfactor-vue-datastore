@@ -9,6 +9,10 @@
         "precommit": "lint-staged",
         "prepublish": "npm run build"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dewsign/maxfactor-vue-datastore.git"
+    },
     "author": "Marco Mark <marco.mark@dewsign.co.uk>",
     "license": "MIT",
     "devDependencies": {
