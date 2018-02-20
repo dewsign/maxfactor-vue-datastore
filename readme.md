@@ -8,10 +8,6 @@ Authors:
 
 A simple Vue plugin to manage data storage and persist using local storage
 
-### Dependencies
+### Configuration and development notes
 
-* Vue.js
-
-## Changelog
-
-* 0.0.1 First npm release
+TBC

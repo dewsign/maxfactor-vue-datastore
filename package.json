@@ -5,15 +5,12 @@
     "main": "dist/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "precommit": "lint-staged",
-        "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "precommit": "lint-staged"
     },
     "author": "Marco Mark <marco.mark@dewsign.co.uk>",
     "license": "MIT",
     "devDependencies": {
+        "babel-cli": "^6.26.0",
         "babel-eslint": "^8.0.2",
         "babel-preset-es2015-rollup": "^3.0.0",
         "eslint": "^4.12.1",
@@ -27,7 +24,6 @@
         "rollup-plugin-babel": "^3.0.2"
     },
     "dependencies": {
-        "laravel-mix": "^1.7.2",
         "vue": "^2.5.10",
         "vue-localstorage": "^0.5.0"
     }
