@@ -1,6 +1,6 @@
 {
     "name": "maxfactor-vue-datastore",
-    "version": "0.0.3",
+    "version": "1.0.0",
     "description": "A Vue plugin to persist data to local storage.",
     "main": "dist/index.js",
     "scripts": {
